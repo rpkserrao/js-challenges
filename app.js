@@ -1,7 +1,10 @@
-function booleanInteger(num) {
-  return num % 2 === 0 ? 1 : -1
+function showRating(rating) {
+    return "★".repeat(Math.floor(rating)) + "½".repeat(rating % 1 ? 1 : 0) + "☆".repeat(5 - Math.ceil(rating));
 }
 
-console.log(booleanInteger(1))
-console.log(booleanInteger(2))
-console.log(booleanInteger(5))
+console.log(showRating(3));
+console.log(showRating(4.5));
+console.log(showRating(0.5));
+
+
+
